@@ -10,7 +10,7 @@ int main() {
     const int TOPEG = 3;
     const int TEMPPEG = 2;
     const int NUMDISKS = 3;
-    for (auto numdisks: {3,5,6,10,20}) {
+    for (auto numdisks: {5,10,15,20,25,30,35}) {
       cout << "Numdisks: " << numdisks << endl;
       moveDisks(numdisks, FROMPEG, TOPEG, TEMPPEG);
       cout << "Moved " << numdisks << " pegs"
