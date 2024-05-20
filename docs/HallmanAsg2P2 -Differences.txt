@@ -1,0 +1,2 @@
+After running both modified versions of the Hanoi programs multiple times, the iterative version generally performed better with a larger number of disks due to the reduced overhead associated with function calls.
+The recursive version, while simpler and more refined, is impractical for larger inputs because of the exponential increase in recursive calls and the associated overhead.
