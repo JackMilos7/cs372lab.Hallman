@@ -24,7 +24,6 @@ void useCase1() {
 }
 
 
-
 void useCase2() {
     const int size = 100;
     int* array1 = new int[size];
