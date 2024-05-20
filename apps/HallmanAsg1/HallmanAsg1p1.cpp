@@ -1,3 +1,9 @@
+//File: HallmanAsg1P1.cpp
+//Author: Jackson Hallman
+//Student Num: 00102945
+//Email: jhallma5@my.athens.edu
+//Purpose: Demonstrates some classic pointer coding anti-patterns. 
+
 #include <iostream>
 #include <string>
 
