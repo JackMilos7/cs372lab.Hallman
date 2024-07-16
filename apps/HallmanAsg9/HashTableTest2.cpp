@@ -8,7 +8,7 @@
 
 int main() {
 
-    // A small size to demonstrate probing
+// A small size to demonstrate probing
 
     int size = 7;          
     HashTable ht(size);

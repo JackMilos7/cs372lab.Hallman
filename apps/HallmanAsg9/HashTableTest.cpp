@@ -13,7 +13,7 @@ int main() {
     int size = 7;
     HashTable ht(size);
 
-    // Insert elements
+// Insert elements
 
     ht.insert(10);
     ht.insert(20);
@@ -26,18 +26,18 @@ int main() {
     std::cout << "Initial table:\n";
     ht.display();
 
-    // Test search
+// Test search
 
     std::cout << "\nSearching for 15: " << (ht.search(15) ? "Found" : "Not Found") << "\n";
     std::cout << "Searching for 99: " << (ht.search(99) ? "Found" : "Not Found") << "\n";
 
-    // Test remove
+// Test remove
 
     ht.remove(15);
     std::cout << "\nTable after removing 15:\n";
     ht.display();
 
-    // Insert more elements to test full table behavior
+// Insert more elements to test full table behavior
 
     ht.insert(13);
     ht.insert(26);

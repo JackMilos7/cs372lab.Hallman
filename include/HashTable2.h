@@ -12,7 +12,9 @@ class HashTable {
 private:
     std::vector<int> table;
     int capacity;
-    int emptySlot = -1;          // Assume -1 represents an empty slot
+
+    // Assume -1 represents an empty slot
+    int emptySlot = -1;         
 
     int hashFunction(int key) {
 
