@@ -1,4 +1,4 @@
-//File: Tree.h - A6P2/P3
+//File: Tree.h - A6P2/P3/Final
 //Author: Jackson Hallman
 //Student Num: 00102945
 //Email: jhallma5@my.athens.edu
@@ -57,7 +57,7 @@ private:
                 return node->left;
             }
 
-            // Node with two children: Get the inorder successor (smallest in the right subtree)
+            // Node with two children: Get the inorder successor
 
             std::shared_ptr<Node> temp = findMin(node->right);
 
@@ -71,7 +71,6 @@ private:
         }
         return node;
     }
-
 
 public:
     Tree() : root(nullptr) {}
@@ -109,19 +108,37 @@ public:
         root = deleteNode(root, value, deleted);
         return deleted;
     }
+
+    // Public accessor for root
+
+    std::shared_ptr<Node> getRoot() const { return root; }
 };
 
-int main() 
+// Function to count the number of nodes in a tree
 
-{
+template<typename V>
+int countNodes(const std::shared_ptr<typename Tree<V>::Node>& node) {
+    if (!node) return 0;
+    return 1 + countNodes<V>(node->left) + countNodes<V>(node->right);
+}
 
-    // Example usage
-    Tree<int> leftTree;
-    Tree<int> rightTree;
-    Tree<int> tree(leftTree, 10, rightTree);
+// Function to count the number of internal nodes
 
-    tree.deleteNode(10); // Deleting root node
-    std::cout << "Tree is empty: " << tree.isEmpty() << std::endl;
+template<typename V>
+int countInternalNodes(const std::shared_ptr<typename Tree<V>::Node>& node) {
+    if (!node || (!node->left && !node->right)) return 0;
+    return 1 + countInternalNodes<V>(node->left) + countInternalNodes<V>(node->right);
+}
 
-    return 0;
+// Function to calculate the external path length
+
+template<typename V>
+void externalPathLength(const std::shared_ptr<typename Tree<V>::Node>& node, int depth, int& sum) {
+    if (!node) return;
+    if (!node->left && !node->right) {
+        sum += depth;
+        return;
+    }
+    externalPathLength<V>(node->left, depth + 1, sum);
+    externalPathLength<V>(node->right, depth + 1, sum);
 }
