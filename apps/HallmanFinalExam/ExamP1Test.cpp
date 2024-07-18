@@ -12,6 +12,7 @@ int main() {
     Tree<int> rightTree;
     Tree<int> tree(leftTree, 10, rightTree);
 
+
     tree.deleteNode(10); 
     std::cout << "Tree is empty: " << tree.isEmpty() << std::endl;
 

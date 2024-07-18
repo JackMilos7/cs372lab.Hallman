@@ -11,6 +11,7 @@ class Table {
 public:
 
     // Make sure the size is a power of 2
+
     static const std::size_t CAPACITY = 1024; 
     Table();
 

@@ -14,6 +14,7 @@ struct RecordType {
 };
 
 int main() {
+
     // Create a Table instance
 
     Table<RecordType> table;

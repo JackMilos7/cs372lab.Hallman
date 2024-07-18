@@ -57,7 +57,7 @@ private:
                 return node->left;
             }
 
-            // Node with two children: Get the inorder successor
+            // Node with two children
 
             std::shared_ptr<Node> temp = findMin(node->right);
 

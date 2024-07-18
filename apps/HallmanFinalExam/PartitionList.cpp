@@ -27,7 +27,7 @@ void partitionList(T split, std::list<T>& listParted, std::list<T>* lessPtr, std
 template<typename T>
 std::list<T>* quicksort(std::list<T>& inputList) {
 
-	//if impossible to be out of order, return a ptr to this list
+	//Return a ptr to this list if impossible to be out of order
 
 	if (inputList.size() <= 1) {
 		return new std::list<T>(inputList);
