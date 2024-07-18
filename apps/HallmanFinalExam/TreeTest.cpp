@@ -1,4 +1,4 @@
-// File: ExamP1Test.cpp
+// File: TreeTest.cpp
 // Author: Jackson Hallman
 // Student Num: 00102945
 // Email: jhallma5@my.athens.edu
